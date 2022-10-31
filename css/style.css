@@ -1,0 +1,150 @@
+.grid {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 400px minmax(200px, auto) auto;
+  grid-template-areas:
+    "header header"
+    "leftbar main"
+    "footer footer";
+  column-gap: 1px;
+  row-gap: 1px;
+}
+
+.page-header {
+  grid-area: header;
+}
+
+#header {
+  background-image: url("https://media.discordapp.net/attachments/981296985543933952/1036693101319815178/Sem_titulo.jpg?width=1280&height=500");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#header h1 {
+  text-shadow: 2px 2px white;
+  font-size: 60px;
+}
+
+.page-leftbar {
+  grid-area: leftbar;
+}
+
+.page-main {
+  grid-area: main;
+}
+
+.page-footer {
+  grid-area: footer;
+}
+
+.content {
+  color: #242424;
+  background-color: lightblue;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  width: 900px;
+  height: 1200px;
+}
+
+.menu {
+  padding: 10px;
+}
+
+.menu li {
+    position: relative;
+    margin: 1em 0;
+  font-size: 20px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+ul {
+  display: table;
+  margin: auto auto;
+}
+
+iframe {
+  height: minmax(800px, auto);
+  width: 100%;
+  resize: both;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "leftbar"
+      "main"
+      "footer";
+  }
+
+  #header h1 {
+    text-shadow: 2px 2px white;
+    font-size: 48px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .menu li {
+    position: relative;
+    font-size: 20px;
+    list-style: none;
+  }
+
+  iframe {
+    height: minmax(1000px, auto);;
+    width: 90%;
+    resize: both;
+    overflow: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: 400px auto auto auto;
+    grid-template-areas:
+      "header"
+      "leftbar"
+      "main"
+      "footer";
+  }
+
+  #header h1 {
+    text-shadow: 2px 2px white;
+    font-size: 48px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu li {
+    position: relative;
+    margin: 0 2em;
+    font-size: 20px;
+    list-style: none;
+    display: inline;
+  }
+
+}
